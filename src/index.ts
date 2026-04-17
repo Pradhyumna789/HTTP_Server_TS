@@ -14,6 +14,10 @@ const middlewareLogResponses = (req: Request, res: Response, next: NextFunction)
   next();
 };
 
+res.on("finish", () => {
+  console.log(`[NON-OK] ${res}`);
+})
+
 const middlewareMetricsInc = (req: Request, res: Response, next: NextFunction) => {
   config.fileServerHits++; 
   next();
@@ -31,7 +35,7 @@ const validateChirpHandler = (req: Request, res: Response) => {
   };
 
   type errorBody = {
-    error: string;
+    error: string;  
   };
 
   type validityBody = {

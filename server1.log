@@ -1,8 +1,0 @@
-
-> http_server_ts@1.0.0 dev
-> npx tsc && node dist/index.js
-
-Server is running at http://localhost:8080
-[NON-OK] GET / - Status: 404
-[NON-OK] GET /favicon.ico - Status: 404
-[NON-OK] GET /api/metrics - Status: 404
